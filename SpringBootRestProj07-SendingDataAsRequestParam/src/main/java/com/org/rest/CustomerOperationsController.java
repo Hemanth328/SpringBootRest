@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.service.annotation.PostExchange;
 
 @RestController
-@RequestMapping("/customercontro")
+@RequestMapping("/customercontroller")
 public class CustomerOperationsController {
 
 	/*@GetMapping("/report")
