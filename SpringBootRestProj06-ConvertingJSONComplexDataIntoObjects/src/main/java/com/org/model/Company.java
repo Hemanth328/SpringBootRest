@@ -16,7 +16,7 @@ public class Company {
 	private String companyName;
 	@JsonFormat(pattern = "yyyy-MM-dd") // Optional
 	private LocalDate dos;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") // by default it expects this pattern, howerver its optional for this kind of pattern
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") // by default it expects this pattern, however its optional for this kind of pattern
 	private LocalDateTime dtos;
 	private List<Project> projectsInfo;
 	@JsonFormat(pattern = "HH:mm:ss")  //optional for this pattern
