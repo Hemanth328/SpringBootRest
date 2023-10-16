@@ -44,7 +44,7 @@ public class StudentOPerationsController {
 	
 	
 	@GetMapping("/report/sno/{sname}")  // this will get high priority over the above method cause this mapping has static parameter due to which this method will be executed
-	public ResponseEntity<String> showReport2(@PathVariable("sno") Integer no, @PathVariable String sname) {
+	public ResponseEntity<String> showReport2(@PathVariable(name = "sno", required = false) Integer no, @PathVariable(required = false) String sname) {
 		
 		System.out.println("StudentOPerationsController.showReport2()");
 		
@@ -55,7 +55,7 @@ public class StudentOPerationsController {
 	
 	
 	@GetMapping("/report/{sno}/sname")
-	public ResponseEntity<String> showReport3(@PathVariable(name ="sno", required= false) Integer no, @PathVariable String sname) {
+	public ResponseEntity<String> showReport3(@PathVariable(name ="sno", required= false) Integer no, @PathVariable(required = false) String sname) {
 	
 		System.out.println("StudentOPerationsController.showReport3()");
 		
@@ -66,7 +66,7 @@ public class StudentOPerationsController {
 	
 	
 	@GetMapping("/report/sno/sname")
-	public ResponseEntity<String> showReport4(@PathVariable(name = "sno", required = false) String no, @PathVariable String sname) {
+	public ResponseEntity<String> showReport4(@PathVariable(name = "sno", required = false) String no, @PathVariable(required = false) String sname) {
 		
 		System.out.println("StudentOPerationsController.showReport4()");
 		
