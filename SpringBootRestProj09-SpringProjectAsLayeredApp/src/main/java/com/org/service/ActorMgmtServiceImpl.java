@@ -29,9 +29,11 @@ public class ActorMgmtServiceImpl implements IActorMgmtService {
 	public List<Actor> getAllActors() {
 		List<Actor> list = actorRepo.findAll();
 //		list.sort((t1, t2) ->t1.getActorName().compareTo(t2.getActorName()));
-		Collections.sort(list, (t1, t2)->t1.getActorName().compareTo(t2.getActorName())); // either we can use this nor we can use the above technique to sort as per the name
+//		Collections.sort(list, (t1, t2)->t1.getActorName().compareTo(t2.getActorName())); // either we can use this nor we can use the above technique to sort as per the name
+//		
+		list.sort((x, y) -> x.getActorName().compareTo(y.getActorName()));
 		
-		list.stream().sorted();
+//		list.stream().sorted();
 		return list;
 	}
 	
